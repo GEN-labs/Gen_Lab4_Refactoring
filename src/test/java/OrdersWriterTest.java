@@ -1,5 +1,3 @@
-
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class OrdersWriterTest {
     Orders orders = new Orders();
     Order order111 = new Order(111);
+
+/*
+    @Test
+    public void testColor(){
+
+    }*/
 
     @BeforeEach
     public void SetupOneOrder() {
@@ -35,7 +39,7 @@ public class OrdersWriterTest {
 
     @Test
     public void OneOrderWithOneProduct() {
-        order111.AddProduct(new Product("Shirt", 1, 3, 2.99, "TWD"));
+        order111.AddProduct(new Product("Shirt", Color.BLUE, 3, 2.99, "TWD"));
 
         String order111Json = JsonOrder111WithProduct("{\"code\": \"Shirt\", \"color\": \"blue\", \"size\": \"M\", \"price\": 2.99, \"currency\": \"TWD\"}");
         assertEquals("{\"orders\": [" + order111Json + "]}", new OrdersWriter(orders).getContents());
@@ -43,7 +47,7 @@ public class OrdersWriterTest {
 
     @Test
     public void OneOrderWithOneProductNoSize() {
-        order111.AddProduct(new Product("Pot", 2, -1, 16.50, "SGD"));
+        order111.AddProduct(new Product("Pot", Color.RED, -1, 16.50, "SGD"));
 
         String order111Json = JsonOrder111WithProduct("{\"code\": \"Pot\", \"color\": \"red\", \"price\": 16.5, \"currency\": \"SGD\"}");
         assertEquals("{\"orders\": [" + order111Json + "]}", new OrdersWriter(orders).getContents());
