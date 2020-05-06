@@ -4,9 +4,9 @@ public class Product {
     private Color color;
     private Size size;
     private double price;
-    private String currency;
+    private Currency currency;
 
-    public Product(String code, Color color, Size size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, Currency currency) {
         this.code = code;
         this.color = color;
         this.size = size;
@@ -30,7 +30,8 @@ public class Product {
         return price;
     }
 
-    public String getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
+
 }

@@ -64,4 +64,17 @@ public class OrdersWriter {
     private String getColorFor(Product product) {
         return product.getColor().getText();
     }
+
+    public static void main(String[] args) {
+
+        Product p1 = new Product("code1", Color.RED, Size.M, 12.23, Currency.CHF);
+        Order order = new Order(1);
+        order.AddProduct(p1);
+
+        Orders orders = new Orders();
+        orders.AddOrder(order);
+        OrdersWriter ow = new OrdersWriter(orders);
+
+        System.out.println(ow.getContents());
+    }
 }
