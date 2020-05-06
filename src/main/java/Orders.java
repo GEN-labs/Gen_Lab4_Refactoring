@@ -20,7 +20,7 @@ public class Orders {
 
     public String toString(){
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("{\"orders\": [");
 
         for (Order order : orders) {
             sb.append(order.toString());
@@ -29,6 +29,6 @@ public class Orders {
         if (orders.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
-        return sb.toString();
+        return sb.append("]}").toString();
     }
 }

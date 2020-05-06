@@ -1,9 +1,5 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
-
-//test
 
 public class Order {
     private List<Product> products = new ArrayList<Product>();
