@@ -1,4 +1,6 @@
 
+// TODO : Moi j'aurais fait des fonctions de check si
+// l'order et le product est vide. Il faut sinon séparer affichage et contrôle.
 
 public class OrdersWriter {
     private Orders orders;
