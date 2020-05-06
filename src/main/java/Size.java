@@ -8,7 +8,6 @@ public enum Size {
     XXL("XXL"),
     SIZE_NOT_APPLICABLE("Size not applicable");
 
-
     private String text;
 
     Size(String text) {

@@ -22,10 +22,13 @@ public class Orders {
 
         StringBuilder sb = new StringBuilder("{\"orders\": [");
 
+        //Displaying each order
         for (Order order : orders) {
             sb.append(order.toString());
             sb.append(", ");
         }
+
+        //if it's the last one we remove the comma
         if (orders.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
