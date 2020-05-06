@@ -6,11 +6,6 @@ public class OrdersWriterTest {
     Orders orders = new Orders();
     Order order111 = new Order(111);
 
-/*
-    @Test
-    public void testColor(){
-
-    }*/
 
     @BeforeEach
     public void SetupOneOrder() {
