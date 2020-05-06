@@ -1,4 +1,4 @@
-public enum Color {
+public enum Color{
     BLUE("blue"),
     RED("red"),
     YELLOW("yellow"),
