@@ -6,20 +6,6 @@ public class OrdersTest {
     Orders orders = new Orders();
     Order order111 = new Order(111);
 
-
-    @Test
-    public void printProduct(){
-
-    }
-    @Test
-    public void printOrder(){
-
-    }
-    @Test
-    public void printOrders(){
-
-    }
-
     @BeforeEach
     public void SetupOneOrder() {
         orders.AddOrder(order111);
