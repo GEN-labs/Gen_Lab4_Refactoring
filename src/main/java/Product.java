@@ -14,26 +14,6 @@ public class Product {
         this.currency = currency;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public Size getSize() {
-        return size;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
