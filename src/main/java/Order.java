@@ -9,10 +9,6 @@ public class Order {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return id;
-    }
-
     public int getProductsCount() {
         return products.size();
     }
