@@ -1,4 +1,7 @@
-public enum Color{
+/**
+ * Curstom enum class Color
+ */
+public enum Color {
     BLUE("blue"),
     RED("red"),
     YELLOW("yellow"),

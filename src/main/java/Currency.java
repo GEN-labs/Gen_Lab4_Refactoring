@@ -1,5 +1,7 @@
+/**
+ * Cursom currency enum class
+ */
 public enum Currency {
-
     USD("$"),
     SGD("SGD"),
     TWD("TWD"),

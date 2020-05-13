@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Order class
+ * An order is defined by is id. It contains a list of Product
+ * It is displayable via toString() method
+ */
 public class Order {
     private List<Product> products = new ArrayList<Product>();
     private int id;

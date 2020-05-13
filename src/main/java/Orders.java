@@ -1,8 +1,11 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Orders class
+ * An Orders object contains a list of Order objects
+ * It is displayable via toString() method
+ */
 public class Orders {
     private List<Order> orders = new ArrayList<Order>();
 
