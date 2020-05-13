@@ -10,7 +10,6 @@ public class OrdersTest {
     Orders orders = new Orders();
     Order order111 = new Order(111);
 
-
     @Test
     public void printProduct(){
         String res = "{\"code\": \"1312\", \"color\": \"blue\", \"size\": \"M\", \"price\": 13.12, \"currency\": \"$\"}";

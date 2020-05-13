@@ -14,10 +14,6 @@ public class Order {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return id;
-    }
-
     public int getProductsCount() {
         return products.size();
     }
@@ -37,16 +33,19 @@ public class Order {
         sb.append(id);
         sb.append(", ");
         sb.append("\"products\": [");
+
+        //Displaying each product
         for (Product product : products ) {
             sb.append(product.toString());
             sb.append(", ");
         }
+
+        //if it's the last one we remove the comma
         if (getProductsCount() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
-        sb.append("]");
-        sb.append("}");
-        return sb.toString();
+
+        return sb.append("]}").toString();
     }
 
 }
