@@ -1,23 +1,33 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class OrdersTest {
+
+
+    Product product = new Product("1312", Color.BLUE, Size.M, 13.12 ,Currency.USD);
     Orders orders = new Orders();
     Order order111 = new Order(111);
 
 
     @Test
     public void printProduct(){
-
+        String res = "{\"code\": \"1312\", \"color\": \"blue\", \"size\": \"M\", \"price\": 13.12, \"currency\": \"$\"}";
+        assertEquals(res, product.toString());
     }
     @Test
     public void printOrder(){
-
+        String res = "{\"id\": 111, \"products\": [{\"code\": \"1312\", \"color\": \"blue\", \"size\": \"M\", \"price\": 13.12, \"currency\": \"$\"}]}";
+        order111.AddProduct(product);
+        System.out.println(order111);
+        assertEquals(res, order111.toString());
     }
     @Test
     public void printOrders(){
-
+        order111.AddProduct(product);
+        String res = "{\"orders\": [{\"id\": 111, \"products\": [{\"code\": \"1312\", \"color\": \"blue\", \"size\": \"M\", \"price\": 13.12, \"currency\": \"$\"}]}]}";
+        assertEquals(res, orders.toString());
     }
 
     @BeforeEach

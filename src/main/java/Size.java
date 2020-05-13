@@ -1,3 +1,6 @@
+/**
+ * Cursom enum class size
+ */
 public enum Size {
 
     XS("XS"),

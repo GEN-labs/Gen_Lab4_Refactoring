@@ -1,3 +1,7 @@
+/**
+ * Product class
+ * A product is defined by is code, color, size, price and currency
+ */
 public class Product {
 
     private String code;
@@ -14,6 +18,7 @@ public class Product {
         this.currency = currency;
     }
 
+    /* Getters */
     public String getCode() {
         return code;
     }
